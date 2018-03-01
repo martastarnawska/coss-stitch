@@ -1,0 +1,134 @@
+body {
+    background-color: #DCDCDC;
+}
+
+h1 {
+    font-family: Brush Script MT;
+    font-size: 60px;
+    margin: 0.2em;
+    text-align: center;
+    }
+
+h2 {
+    margin: 1em 0 0.25em;
+    font-family: Brush Script MT;
+}
+
+h2:first-of-type {
+    margin-top: 0.5em;
+}
+
+#sizePicker {
+  font-family: Georgia, serif;
+}
+
+.submit {
+  font-family: Georgia, serif;
+  margin-bottom: 7px;
+  border-radius: 5px;
+}
+
+table,
+tr,
+td {
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    background-color: white;
+}
+
+tr {
+    height: 20px;
+}
+
+td {
+    width: 20px;
+}
+
+input[type=number] {
+    width: 6em;
+    border-radius: 5px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .heading {
+    flex-basis: 100vw;
+  }
+
+  .box {
+    flex: 1 1 ;
+  }
+
+  .canvas {
+    flex: 3 1;
+    align-self: flex-start;
+  }
+
+  .empty {
+    flex: 1 1;
+  }
+
+@media (max-width: 750px) {
+  .container {
+    flex-direction: column;
+    padding: 15px;
+  }
+  .heading {
+    flex: 1 1
+  }
+
+  .box {
+    flex: 1;
+    align-self: center;
+  }
+
+  .canvas {
+    flex: 1;
+    align-self: center;
+  }
+  .empty {
+    flex: 1 1;
+  }
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 45px;
+  }
+}
+
+#sizePicker {
+  font-style: italic;
+}
+
+#clear {
+  font-family: Georgia, serif;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.box {
+  width: 170px;
+  height: 30%;
+  text-align: center;
+  background-color: grey;
+  border: 2px white dashed;
+  padding: 20px;
+  border-radius: 10px;
+  margin-right: 20px;
+  box-shadow: 0 0 0 4px grey;
+}
+
+.canvas {
+  text-align: center;
+  }

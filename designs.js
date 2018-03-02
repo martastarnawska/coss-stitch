@@ -1,6 +1,3 @@
-// Select color input
-// Select size input
-// When size is submitted by the user, call makeGrid()
 function makeGrid() {
   var submit=$("input:submit");
   submit.addClass("submit");
@@ -56,5 +53,24 @@ function makeGrid() {
     });
   });
 }
-
 $(makeGrid);
+
+var infoButton = $("#button");
+var info = $("#info");
+var hide = $("#hide");
+
+  infoButton.click(function() {
+    info.css("visibility", "visible");
+    if ($(window).width() <= 750) {
+      info.css("display", "block");
+    }
+    preventDefault();
+  });
+
+  hide.click(function() {
+    info.css("visibility", "hidden");
+    if ($(window).width() <= 750) {
+      info.css("display", "none");
+    }
+    preventDefault();
+  })

@@ -2,6 +2,14 @@ body {
     background-color: #DCDCDC;
 }
 
+nav {
+ text-align: right;
+}
+.button {
+  border-radius: 7px;
+  margin: 10px 10px;
+}
+
 h1 {
     font-family: Brush Script MT;
     font-size: 60px;
@@ -66,6 +74,15 @@ input[type=number] {
 
   .box {
     flex: 1 1 ;
+    width: 170px;
+    height: 30%;
+    text-align: center;
+    background-color: grey;
+    border: 2px white dashed;
+    padding: 20px;
+    border-radius: 10px;
+    margin-right: 20px;
+    box-shadow: 0 0 0 4px grey;
   }
 
   .canvas {
@@ -73,40 +90,33 @@ input[type=number] {
     align-self: flex-start;
   }
 
-  .empty {
+  .instruction {
+    visibility: hidden;
     flex: 1 1;
+    font-family: 'Georgia', cursive;
+    font-style: italic;
+    width: 170px;
+    height: 35%;
+    text-align: center;
+    background-color: silver;
+    border: 2px  #999999 solid;
+    padding: 20px;
+    border-radius: 10px;
+    margin-right: 5px;
+    margin-left: 20px;
+    box-shadow: 0 0 0 6px  silver;
+  }
+  .instruction p {
+    text-align: left;
   }
 
-@media (max-width: 750px) {
-  .container {
-    flex-direction: column;
-    padding: 15px;
-  }
-  .heading {
-    flex: 1 1
+  .hide {
+    border-radius: 7px;
+    text-align: center;
   }
 
-  .box {
-    flex: 1;
-    align-self: center;
-  }
 
-  .canvas {
-    flex: 1;
-    align-self: center;
-  }
-  .empty {
-    flex: 1 1;
-  }
-}
-
-@media (max-width: 400px) {
-  h1 {
-    font-size: 45px;
-  }
-}
-
-#sizePicker {
+.sizePicker {
   font-style: italic;
 }
 
@@ -117,18 +127,43 @@ input[type=number] {
   border-radius: 5px;
 }
 
-.box {
-  width: 170px;
-  height: 30%;
-  text-align: center;
-  background-color: grey;
-  border: 2px white dashed;
-  padding: 20px;
-  border-radius: 10px;
-  margin-right: 20px;
-  box-shadow: 0 0 0 4px grey;
-}
-
 .canvas {
   text-align: center;
+  }
+
+  @media (max-width: 750px) {
+    .container {
+      flex-direction: column;
+      padding: 15px;
+    }
+    .heading {
+      flex: 1 1
+    }
+
+    .box {
+      flex: 1;
+      align-self: center;
+      margin-bottom: 10px;
+    }
+
+    .canvas {
+      order: 1;
+      flex: 1;
+      align-self: center;
+    }
+    .instruction {
+      flex: 2;
+      align-self: center;
+      width: auto;
+      display: none;
+      margin-top: 10px;
+      margin-right: 20px;
+
+    }
+  }
+
+  @media (max-width: 400px) {
+    h1 {
+      font-size: 45px;
+    }
   }
